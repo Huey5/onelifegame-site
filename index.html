@@ -161,6 +161,18 @@ section{padding-block:clamp(72px,10vw,128px)}
 .card-hot p{color:#d6cdb9}
 .big-num{font-family:var(--display);font-size:clamp(56px,8vw,88px);color:var(--flame);line-height:1}
 @media (max-width:860px){.duo{grid-template-columns:1fr}}
+.alloc{display:grid;grid-template-columns:auto 1fr;gap:34px;align-items:center;margin-top:18px;padding:30px;border-radius:20px;background:var(--panel);border:1px solid var(--line)}
+.pie{width:clamp(170px,24vw,230px);max-width:100%;aspect-ratio:1;border-radius:50%;background:conic-gradient(var(--gold) 0 70%,var(--ember) 0 90%,#88bcac 0 95%,#7aa6c8 0 100%);display:grid;place-items:center;position:relative}
+.pie::after{content:"";position:absolute;inset:23%;border-radius:50%;background:var(--panel)}
+.pie span{position:relative;z-index:1;font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--dim)}
+.alloc h3{font-size:30px;margin:8px 0 4px}
+.legend{list-style:none;padding:0;margin:14px 0 0;display:grid;gap:10px}
+.legend li{display:grid;grid-template-columns:14px 60px 1fr;gap:12px;align-items:baseline}
+.legend i{width:14px;height:14px;border-radius:4px;display:inline-block;transform:translateY(2px)}
+.legend b{font-family:var(--display);font-size:26px;color:var(--bone);font-weight:400}
+.legend span{color:var(--ash)}
+.legend span strong{color:var(--bone);font-weight:600}
+@media (max-width:860px){.alloc{grid-template-columns:1fr;justify-items:center}.alloc>div:last-child{justify-self:stretch}}
 
 /* roadmap */
 .road{position:relative;display:grid;gap:0;margin-left:10px}
@@ -322,6 +334,19 @@ footer a:hover{color:var(--bone)}
         <div class="card-hot"><span class="eyebrow">Every life fuels the token</span><h3>Entry fees go to token buybacks.</h3><p>Every $20 life is used to buy back the ONE LIFE token. The more lives lived in the world, the more the game puts back into it.</p></div>
         <div class="card-hot"><span class="eyebrow">Airdrop</span><div class="big-num">Planned</div><p>An airdrop is part of the plans for ONE LIFE. No date or details yet.</p></div>
       </div>
+      <div class="alloc">
+        <div class="pie" role="img" aria-label="The token plan: 70% vault, 20% team, 5% liquidity pool, 5% game management"><span>Token plan</span></div>
+        <div>
+          <span class="eyebrow">Hypothetical · may change</span>
+          <h3>Where the ONE LIFE token goes.</h3>
+          <ul class="legend">
+            <li><i style="background:var(--gold)"></i><b>70%</b><span><strong>Vault.</strong> Held back and released to the game over time, so players never run out.</span></li>
+            <li><i style="background:var(--ember)"></i><b>20%</b><span><strong>Team.</strong> The people building ONE LIFE.</span></li>
+            <li><i style="background:#88bcac"></i><b>5%</b><span><strong>Liquidity pool.</strong> Paired with SOL so the token can be traded.</span></li>
+            <li><i style="background:#7aa6c8"></i><b>5%</b><span><strong>Game management.</strong> Running the game: rewards, events and upkeep.</span></li>
+          </ul>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -358,7 +383,7 @@ footer a:hover{color:var(--bone)}
     <div><a href="https://discord.gg/5dEJHQXYER" target="_blank" rel="noopener">Discord</a><a href="https://x.com/One_Life_Game" target="_blank" rel="noopener">X</a><a href="#roadmap">Roadmap</a></div>
     <div>© 2026 ONE LIFE</div>
   </div>
-  <div class="wrap"><p class="fine">Token features, dates and the airdrop are planned and may change. Nothing on this site is financial advice or an offer to sell anything. Crypto prices can go down as well as up; only spend what you can afford to lose.</p></div>
+  <div class="wrap"><p class="fine">Token features, the token plan, dates and the airdrop are planned and may change. Nothing on this site is financial advice or an offer to sell anything. Crypto prices can go down as well as up; only spend what you can afford to lose.</p></div>
 </footer>
 
 <script>
