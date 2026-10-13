@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Get a wallet · ONE LIFE</title>
+<meta name="description" content="Set up a Solana wallet for ONE LIFE in about 3 minutes: Phantom or MetaMask on a computer. Free, and signing in moves nothing.">
+<meta name="theme-color" content="#0a0f13">
+<link rel="canonical" href="https://onelifegame.xyz/wallet.html">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/home-assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/home-assets/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/home-assets/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ONE LIFE">
+<meta property="og:title" content="Get a wallet · ONE LIFE">
+<meta property="og:description" content="Set up Phantom or MetaMask in about 3 minutes. Free, and signing in moves nothing.">
+<meta property="og:image" content="https://onelifegame.xyz/home-assets/og-card.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Emberhold at dusk: the lantern-lit town of ONE LIFE">
+<meta property="og:url" content="https://onelifegame.xyz/wallet.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@One_Life_Game">
+<meta name="twitter:title" content="Get a wallet · ONE LIFE">
+<meta name="twitter:description" content="Set up Phantom or MetaMask in about 3 minutes. Free, and signing in moves nothing.">
+<meta name="twitter:image" content="https://onelifegame.xyz/home-assets/og-card.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=Alegreya+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Spline+Sans+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --ink:#0a0f13;--slate:#101920;--panel:#15212a;--panel2:#1b2a34;
+  --ember:#e8692a;--gold:#f2b451;--flame:#ffd98e;--bone:#efe5d0;--ash:#9aa6ae;--dim:#6f7c85;
+  --line:rgba(242,180,81,.16);--glow:rgba(232,105,42,.35);
+  --display:"IM Fell English SC",Georgia,"Palatino Linotype",serif;
+  --body:"Alegreya Sans","Segoe UI",system-ui,sans-serif;
+  --mono:"Spline Sans Mono",ui-monospace,Consolas,monospace;
+  --gutter:clamp(16px,4vw,48px);--max:1180px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;background:var(--ink)}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--ink);color:var(--bone);font-family:var(--body);font-size:18px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-wrap:break-word}
+img{max-width:100%;display:block}
+a{color:var(--gold)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--flame);outline-offset:3px;border-radius:6px}
+.wrap{max-width:var(--max);margin:0 auto;padding-inline:var(--gutter)}
+.eyebrow{font-family:var(--mono);font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.05;margin:0;text-wrap:balance}
+h2{font-size:clamp(38px,5.5vw,64px);letter-spacing:.02em}
+h3{font-size:clamp(24px,2.6vw,30px)}
+p{margin:0}
+.lede{font-size:clamp(19px,2vw,22px);color:var(--ash);max-width:62ch}
+.skip{position:absolute;left:12px;top:-60px;z-index:40;padding:10px 16px;border-radius:999px;background:var(--flame);color:var(--ink);font-weight:700;text-decoration:none}
+.skip:focus{top:12px}
+
+/* nav (as the homepage) */
+.nav{position:fixed;inset:0 0 auto 0;z-index:20;padding-top:env(safe-area-inset-top,0px);background:linear-gradient(to bottom,rgba(10,15,19,.92),rgba(10,15,19,.55) 70%,transparent);backdrop-filter:blur(6px)}
+.nav .wrap{display:flex;align-items:center;gap:24px;height:64px}
+.brand{display:flex;align-items:center;gap:10px;color:var(--bone);text-decoration:none;font-family:var(--display);font-size:22px;letter-spacing:.08em}
+.brand img{width:28px;height:28px;border-radius:7px}
+.nav nav{display:flex;gap:22px;margin-left:auto}
+.nav nav a{color:var(--ash);text-decoration:none;font-size:15px;letter-spacing:.04em}
+.nav nav a:hover{color:var(--bone)}
+.nav nav a[aria-current="page"]{color:var(--flame)}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:13px 22px;border-radius:999px;font-weight:700;font-size:16px;text-decoration:none;letter-spacing:.02em;transition:transform .15s ease,box-shadow .15s ease,background .15s ease}
+.btn:hover{transform:translateY(-1px)}
+.btn-ember{background:linear-gradient(180deg,#f07a36,#d8561c);color:#1a0d06;box-shadow:0 8px 30px -8px var(--glow),inset 0 1px 0 rgba(255,220,180,.5)}
+.btn-ember:hover{box-shadow:0 12px 36px -8px rgba(232,105,42,.6),inset 0 1px 0 rgba(255,220,180,.5)}
+.btn-ghost{border:1px solid rgba(239,229,208,.28);color:var(--bone);background:rgba(10,15,19,.35)}
+.btn-ghost:hover{border-color:var(--gold);color:var(--flame)}
+.btn svg{width:18px;height:18px;fill:currentColor;flex:none}
+.nav .btn{padding:9px 16px;font-size:14px}
+@media (max-width:860px){.nav nav{display:none}.nav .btn{margin-left:auto}}
+@media (prefers-reduced-motion:reduce){.btn{transition:none}.btn:hover{transform:none}}
+
+/* page hero */
+.ghero{position:relative;overflow:hidden;isolation:isolate}
+.ghero-art{position:absolute;inset:0;z-index:-2;background:url('home-assets/emberhold-title.webp') center 32%/cover no-repeat;opacity:.24}
+.ghero::before{content:"";position:absolute;inset:0;z-index:-1;background:
+  radial-gradient(70% 70% at 78% 42%,rgba(232,105,42,.17),transparent 62%),
+  linear-gradient(to bottom,rgba(10,15,19,.72),rgba(10,15,19,.86) 55%,var(--ink))}
+.ghero .wrap{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,.65fr);gap:clamp(24px,5vw,64px);align-items:center;padding-block:clamp(108px,13vw,150px) clamp(40px,6vw,72px)}
+.ghero h1{font-size:clamp(58px,9vw,112px);letter-spacing:.04em;line-height:.92;color:var(--bone);text-shadow:0 0 40px rgba(232,105,42,.25),0 4px 30px rgba(0,0,0,.6);margin-top:14px}
+.ghero .tag{font-family:var(--display);font-size:clamp(22px,3vw,32px);color:var(--flame);margin-top:12px}
+.ghero .lede{margin-top:14px;color:#d6cdb9}
+.hero-ill{width:100%;max-width:340px;justify-self:center}
+@media (max-width:860px){.ghero .wrap{grid-template-columns:1fr}.hero-ill{display:none}}
+.you{display:flex;gap:12px;align-items:flex-start;margin-top:24px;padding:13px 18px;border-radius:14px;background:rgba(21,33,42,.88);border:1px solid var(--line);max-width:62ch;font-size:16px;line-height:1.5;color:#d6cdb9}
+.you[hidden]{display:none}
+.you .dot{flex:none;width:8px;height:8px;margin-top:8px;border-radius:50%;background:var(--gold);box-shadow:0 0 10px rgba(242,180,81,.7)}
+.you.warn{border-color:rgba(232,105,42,.55)}
+.you.warn .dot{background:var(--ember);box-shadow:0 0 12px var(--ember)}
+.you b{color:var(--bone)}
+
+/* the route: six drawn steps */
+.route{list-style:none;margin:34px 0 0;padding:0;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px;position:relative;max-width:760px}
+.route::before{content:"";position:absolute;left:8%;right:8%;top:27px;height:2px;background:linear-gradient(90deg,var(--ember),var(--gold) 55%,rgba(242,180,81,.18))}
+.route li{position:relative;display:grid;justify-items:center;align-content:start;gap:8px;text-align:center;font-size:14px;color:var(--ash);line-height:1.25}
+.route .ic{width:56px;height:56px;border-radius:50%;display:grid;place-items:center;background:var(--panel);border:1px solid rgba(242,180,81,.42)}
+.route li:last-child .ic{border-color:var(--ember);box-shadow:0 0 18px rgba(232,105,42,.45)}
+.ico{width:26px;height:26px;stroke:var(--gold);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+@media (max-width:560px){.route{grid-template-columns:repeat(3,minmax(0,1fr));row-gap:18px}.route::before{display:none}}
+
+/* a wallet */
+.wsec{padding-block:clamp(28px,5vw,56px)}
+.wsec + .wsec{padding-top:0}
+.wallet{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(24px,4.5vw,64px);padding:clamp(22px,4vw,44px);border-radius:22px;background:linear-gradient(180deg,var(--panel2),var(--panel));border:1px solid var(--line);position:relative;overflow:hidden}
+.wallet::after{content:"";position:absolute;inset:auto auto -90px -90px;width:260px;height:260px;background:radial-gradient(circle,rgba(232,105,42,.14),transparent 70%);pointer-events:none}
+.wallet.rec{border-color:rgba(232,105,42,.45);background:linear-gradient(135deg,rgba(232,105,42,.15),rgba(21,33,42,.96) 55%)}
+.wallet h2{font-size:clamp(46px,6vw,72px);margin-top:12px}
+.badge{display:inline-block;padding:3px 10px;border-radius:999px;font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);background:var(--gold)}
+.badge.alt{background:transparent;color:var(--gold);border:1px solid rgba(242,180,81,.5)}
+.w-why{color:var(--ash);margin-top:10px;font-size:17px}
+.get{margin-top:24px;display:grid;gap:12px;justify-items:start}
+.get-note{font-size:15px;line-height:1.5;color:#d6cdb9;padding:10px 14px;border-left:2px solid var(--ember);background:rgba(10,15,19,.45);border-radius:0 10px 10px 0;max-width:46ch}
+.get-note[hidden]{display:none}
+.others{font-size:14px;line-height:1.7;color:var(--dim);max-width:46ch}
+.others a{color:var(--ash)}
+.others a:hover{color:var(--bone)}
+.only{display:flex;gap:10px;align-items:flex-start;margin-top:22px;font-size:15px;line-height:1.5;color:var(--ash);max-width:46ch}
+.only .ico{width:20px;height:20px;flex:none;margin-top:2px;stroke:var(--flame)}
+.only b{color:var(--bone)}
+.steps{list-style:none;counter-reset:s;margin:0;padding:0;display:grid;gap:16px;align-content:start;position:relative;z-index:1}
+.steps li{counter-increment:s;display:grid;grid-template-columns:38px minmax(0,1fr);gap:14px;align-items:start;font-size:17px;line-height:1.55;color:#d6cdb9}
+.steps li::before{content:counter(s);font-family:var(--mono);font-size:15px;font-weight:500;color:var(--flame);width:38px;height:38px;border-radius:50%;display:grid;place-items:center;border:1px solid rgba(232,105,42,.5);background:rgba(10,15,19,.5)}
+.steps b{color:var(--bone);font-weight:700}
+.steps .ui{color:var(--flame);font-weight:500}
+.steps small{display:block;color:var(--ash);font-size:15px;margin-top:3px}
+@media (max-width:860px){.wallet{grid-template-columns:1fr}}
+.also{margin-top:22px;display:flex;gap:12px;align-items:center;justify-content:center;flex-wrap:wrap;text-align:center;color:var(--ash);font-size:16px}
+.also b{color:var(--bone);font-weight:500}
+
+/* safety */
+.safe-sec{padding-block:clamp(40px,6vw,72px)}
+.safe{display:grid;grid-template-columns:auto minmax(0,1fr);gap:clamp(18px,3.5vw,40px);padding:clamp(22px,4vw,44px);border-radius:22px;border:1px solid rgba(232,105,42,.55);background:linear-gradient(135deg,rgba(232,105,42,.2),rgba(21,33,42,.96) 58%)}
+.safe .shield{width:clamp(60px,8vw,96px);height:auto;stroke:var(--flame);fill:none;stroke-width:1.3;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 0 18px rgba(232,105,42,.45))}
+.safe h2{font-size:clamp(36px,4.6vw,54px)}
+.safe ul{list-style:none;padding:0;margin:20px 0 0;display:grid;grid-template-columns:1fr 1fr;gap:14px 28px}
+.safe li{display:grid;grid-template-columns:22px minmax(0,1fr);gap:12px;align-items:start;color:#d6cdb9;font-size:17px;line-height:1.5}
+.safe li .ico{width:22px;height:22px;margin-top:2px;stroke:var(--flame);stroke-width:2}
+.safe li b{color:var(--bone)}
+@media (max-width:860px){.safe ul{grid-template-columns:1fr}}
+@media (max-width:560px){.safe{grid-template-columns:1fr}}
+
+/* troubleshooting */
+.fix-sec{background:linear-gradient(to bottom,var(--ink),var(--slate));padding-block:clamp(56px,8vw,104px)}
+.sec-head{display:grid;gap:14px;margin-bottom:36px}
+.fixes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.fix{padding:24px 24px 26px;border-radius:18px;background:var(--panel);border:1px solid var(--line);position:relative}
+.fix .ico{width:32px;height:32px}
+.fix h3{font-size:25px;margin:12px 0 10px}
+.fix ul{margin:0;padding-left:18px;display:grid;gap:7px;color:var(--ash);font-size:16px;line-height:1.5}
+.fix ul b{color:var(--bone);font-weight:500}
+.fix .here{display:none;position:absolute;top:18px;right:18px;padding:2px 9px;border-radius:999px;font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink);background:var(--ember)}
+.fix.hit{border-color:rgba(232,105,42,.65);box-shadow:0 12px 40px -14px var(--glow)}
+.fix.hit .here{display:inline-block}
+@media (max-width:980px){.fixes{grid-template-columns:1fr 1fr}}
+@media (max-width:640px){.fixes{grid-template-columns:1fr}}
+
+/* end */
+.final{text-align:center;padding-block:clamp(64px,9vw,112px);background:radial-gradient(60% 80% at 50% 100%,rgba(232,105,42,.2),transparent 70%),var(--slate)}
+.final h2{font-size:clamp(40px,6vw,72px);margin-top:12px}
+.final p{color:var(--ash);margin:14px auto 0;max-width:52ch}
+.cta-row{display:flex;flex-wrap:wrap;gap:14px;margin-top:28px;justify-content:center}
+footer{border-top:1px solid var(--line);padding-block:34px calc(34px + env(safe-area-inset-bottom,0px));color:var(--dim);font-size:14px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:18px;justify-content:space-between;align-items:center}
+footer a{color:var(--ash);text-decoration:none;margin-right:16px}
+footer a:hover{color:var(--bone)}
+.fine{max-width:70ch;font-size:13px;color:var(--dim);margin-top:10px}
+</style>
+</head>
+<body>
+<a class="skip" href="#phantom">Skip to the steps</a>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="./"><img src="home-assets/icon-192.png" alt="">ONE LIFE</a>
+    <nav aria-label="Sections"><a href="./#one-life">The Game</a><a href="./#classes">Classes</a><a href="./#world">World</a><a href="./#web3">Web3</a><a href="./#roadmap">Roadmap</a><a href="wallet.html" aria-current="page">Get a wallet</a></nav>
+    <a class="btn btn-ember" href="https://discord.gg/5dEJHQXYER" target="_blank" rel="noopener">Join the Discord</a>
+  </div>
+</header>
+
+<main id="top">
+  <section class="ghero" aria-labelledby="page-title">
+    <div class="ghero-art" aria-hidden="true"></div>
+    <div class="wrap">
+      <div>
+        <span class="eyebrow">Before you play</span>
+        <h1 id="page-title">Get a wallet</h1>
+        <p class="tag">About 3 minutes. Free.</p>
+        <p class="lede">ONE LIFE has no email sign-up. Your wallet is your account: you sign in by approving a short message. It costs nothing and moves nothing.</p>
+        <p class="you" id="you" hidden><span class="dot" aria-hidden="true"></span><span id="you-text"></span></p>
+        <ol class="route" aria-label="The steps in short">
+          <li><span class="ic"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 8h18"/><path d="M12 11v6"/><path d="M9 14l3 3 3-3"/></svg></span>Add it</li>
+          <li><span class="ic"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h13a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a3 3 0 0 1 3-3h10v4"/><path d="M15 13h3v2h-3a1 1 0 0 1 0-2z"/></svg></span>Create</li>
+          <li><span class="ic"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/><path d="M12 15v2"/></svg></span>Password</li>
+          <li><span class="ic"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l4 4v14H6z"/><path d="M15 3v4h4"/><path d="M9 11h7"/><path d="M9 14.5h7"/><path d="M9 18h4"/></svg></span>Write it down</li>
+          <li><span class="ic"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3h6"/><path d="M10 3l-.5 5L6 12h12l-3.5-4L14 3"/><path d="M12 12v9"/></svg></span>Pin it</li>
+          <li><span class="ic"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.6 2.6L16 9.5"/></svg></span>Sign in</li>
+        </ol>
+      </div>
+      <svg class="hero-ill" viewBox="0 0 320 300" role="img" aria-label="A drawn wallet with a paper of recovery words tucked inside">
+        <defs>
+          <radialGradient id="glow" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#e8692a" stop-opacity=".42"/><stop offset="1" stop-color="#e8692a" stop-opacity="0"/></radialGradient>
+          <linearGradient id="hide" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1b2a34"/><stop offset="1" stop-color="#121c24"/></linearGradient>
+        </defs>
+        <circle cx="160" cy="164" r="134" fill="url(#glow)"/>
+        <g transform="rotate(-7 140 90)">
+          <rect x="84" y="44" width="122" height="96" rx="6" fill="#efe5d0"/>
+          <path d="M98 64h28M134 64h22M164 64h26M98 82h20M126 82h30M164 82h18M98 100h26M132 100h20M160 100h28" stroke="#3a2a1c" stroke-width="5" stroke-linecap="round" opacity=".7"/>
+        </g>
+        <rect x="46" y="112" width="214" height="142" rx="20" fill="url(#hide)" stroke="#f2b451" stroke-width="3"/>
+        <path d="M66 132h174" stroke="#f2b451" stroke-width="2" stroke-dasharray="2 9" stroke-linecap="round" opacity=".55"/>
+        <path d="M66 234h174" stroke="#f2b451" stroke-width="2" stroke-dasharray="2 9" stroke-linecap="round" opacity=".55"/>
+        <path d="M200 152h80a12 12 0 0 1 12 12v42a12 12 0 0 1-12 12h-80a33 33 0 0 1 0-66z" fill="#15212a" stroke="#f2b451" stroke-width="3"/>
+        <circle cx="210" cy="185" r="11" fill="#e8692a"/>
+        <circle cx="210" cy="185" r="4.5" fill="#ffd98e"/>
+        <circle cx="74" cy="64" r="2.6" fill="#ffd98e" opacity=".9"/>
+        <circle cx="262" cy="96" r="2" fill="#ffd98e" opacity=".75"/>
+        <circle cx="286" cy="138" r="1.6" fill="#ffd98e" opacity=".6"/>
+        <circle cx="40" cy="104" r="1.8" fill="#ffd98e" opacity=".6"/>
+      </svg>
+    </div>
+  </section>
+
+  <section class="wsec" id="phantom" aria-labelledby="ph-title">
+    <div class="wrap">
+      <article class="wallet rec">
+        <div>
+          <span class="badge">Recommended</span>
+          <h2 id="ph-title">Phantom</h2>
+          <p class="w-why">Made for Solana, the network ONE LIFE runs on.</p>
+          <div class="get" data-wallet="phantom">
+            <a class="btn btn-ember get-btn" href="https://phantom.com/download" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3h7v7h-2V6.4l-9.3 9.3-1.4-1.4L17.6 5H14V3ZM5 5h6v2H5v12h12v-6h2v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Z"/></svg><span class="get-label">Get Phantom at phantom.com</span></a>
+            <p class="get-note" hidden></p>
+            <p class="others"></p>
+          </div>
+          <p class="only"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 3v5c0 5-3 8.5-7 10-4-1.5-7-5-7-10V6z"/></svg><span>Only from <b>phantom.com</b> or this button. Never from a search ad.</span></p>
+        </div>
+        <ol class="steps">
+          <li><span><b>Add it to your browser.</b> On the store page, <span data-add>click the add button, then confirm</span>.</span></li>
+          <li><span><b>Create a wallet.</b> Phantom opens a tab (or click its icon). Click <span class="ui">“Create a New Wallet”</span>, then <span class="ui">“Create a Recovery Phrase Wallet”</span>.<small>Phantom also offers Google or Apple sign-up. That works too; this guide uses the phrase.</small></span></li>
+          <li><span><b>Set a password.</b> It unlocks Phantom in this browser only.</span></li>
+          <li><span><b>Write the 12 words on paper,</b> in order. No photo, no cloud. Anyone with these words owns the wallet. Click <span class="ui">“I saved my Recovery Phrase”</span> and confirm.</span></li>
+          <li><span><b>Pick a username,</b> then <span class="ui">“Continue”</span> and <span class="ui">“Get Started”</span>.<small>Phantom’s username, not your hero’s name.</small></span></li>
+          <li><span><b>Pin it.</b> Click the puzzle-piece icon in the toolbar, then the pin next to Phantom.</span></li>
+          <li><span><b>Sign in.</b> Open <a href="https://play.onelifegame.xyz" target="_blank" rel="noopener">play.onelifegame.xyz</a> and click <span class="ui">Connect wallet</span>. In Phantom, approve the connection, then the message <span class="ui">“Sign in to ONE LIFE”</span>. Done.</span></li>
+        </ol>
+      </article>
+    </div>
+  </section>
+
+  <section class="wsec" id="metamask" aria-labelledby="mm-title">
+    <div class="wrap">
+      <article class="wallet">
+        <div>
+          <span class="badge alt">The alternative</span>
+          <h2 id="mm-title">MetaMask</h2>
+          <p class="w-why">Already have it? It works too. Every MetaMask account comes with a Solana address.</p>
+          <div class="get" data-wallet="metamask">
+            <a class="btn btn-ghost get-btn" href="https://metamask.io/download" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3h7v7h-2V6.4l-9.3 9.3-1.4-1.4L17.6 5H14V3ZM5 5h6v2H5v12h12v-6h2v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Z"/></svg><span class="get-label">Get MetaMask at metamask.io</span></a>
+            <p class="get-note" hidden></p>
+            <p class="others"></p>
+          </div>
+          <p class="only"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 3v5c0 5-3 8.5-7 10-4-1.5-7-5-7-10V6z"/></svg><span>Only from <b>metamask.io</b> or this button. Never from a search ad.</span></p>
+        </div>
+        <ol class="steps">
+          <li><span><b>Add it to your browser.</b> On the store page, <span data-add>click the add button, then confirm</span>.</span></li>
+          <li><span><b>Create a wallet.</b> Click <span class="ui">“Create a new wallet”</span> and choose the Secret Recovery Phrase.</span></li>
+          <li><span><b>Set a password.</b> It unlocks MetaMask in this browser only.</span></li>
+          <li><span><b>Write the 12 words on paper,</b> in order, and confirm them. No photo, no cloud.</span></li>
+          <li><span><b>Pin it.</b> Click the puzzle-piece icon in the toolbar, then the pin next to MetaMask.</span></li>
+          <li><span><b>Nothing to add for Solana.</b> MetaMask makes a Solana address for each account by itself.</span></li>
+          <li><span><b>Sign in.</b> Open <a href="https://play.onelifegame.xyz" target="_blank" rel="noopener">play.onelifegame.xyz</a>, click <span class="ui">Connect wallet</span>, then approve the connection and the sign-in message in MetaMask.</span></li>
+        </ol>
+      </article>
+      <p class="also"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v5"/><path d="M12 16.5v.5"/></svg><span><b>Solflare</b> and <b>Backpack</b> work too: any Solana wallet that can sign a message.</span></p>
+    </div>
+  </section>
+
+  <section class="safe-sec" id="safety" aria-labelledby="safe-title">
+    <div class="wrap">
+      <div class="safe">
+        <svg class="shield" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 4l16 6v10c0 10.5-6.6 18.6-16 22-9.4-3.4-16-11.5-16-22V10z"/><path d="M17 24l5 5 9-10"/></svg>
+        <div>
+          <span class="eyebrow">Read this once</span>
+          <h2 id="safe-title" style="margin-top:10px">Keep your wallet yours.</h2>
+          <ul>
+            <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg><span><b>ONE LIFE never asks for your recovery phrase or password.</b> Not in the game, not on Discord, never.</span></li>
+            <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span><b>Signing in costs nothing and moves nothing.</b> It is a message, not a payment.</span></li>
+            <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg><span><b>Never type your phrase into any site,</b> chat or form. Anyone who asks for it is stealing.</span></li>
+            <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4l9 16H3z"/><path d="M12 10v4"/><path d="M12 17v.5"/></svg><span><b>Beware fake wallet ads</b> at the top of search results. Use the buttons here or type the address yourself.</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="fix-sec" id="help" aria-labelledby="fix-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Troubleshooting</span>
+        <h2 id="fix-title">If it doesn’t work.</h2>
+      </div>
+      <div class="fixes">
+        <article class="fix" data-for="all"><span class="here">You</span><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/><path d="M8.5 11h5"/></svg><h3>“No wallet found”</h3>
+          <ul><li><b>Refresh the game tab</b> after installing.</li><li>Check the wallet is <b>turned on</b> in your browser’s Extensions page and allowed on all sites.</li><li>Private or incognito windows hide extensions.</li><li>Use the <b>same browser profile</b> you installed it in.</li><li>A school-managed laptop may block extensions: use your own.</li></ul></article>
+        <article class="fix" data-for="all"><span class="here">You</span><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 9h18"/><path d="M12 12v3"/><path d="M12 17.5v.5"/></svg><h3>No approval window</h3>
+          <ul><li><b>Click the wallet’s icon</b> in the toolbar: the request waits there.</li><li>Unlock it with your password if it asks.</li><li>Still nothing? Click Connect wallet again.</li></ul></article>
+        <article class="fix" data-for="brave"><span class="here">You</span><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7h10l-3-3"/><path d="M17 17H7l3 3"/></svg><h3>Two wallets fighting</h3>
+          <ul><li>With both installed, ONE LIFE <b>asks Phantom first</b>.</li><li><b>Pick one.</b> Turn the other off in the Extensions page.</li><li>Brave has a wallet built in. If it opens instead, set the default Solana wallet in Brave’s Settings, under Web3, to your extension.</li></ul></article>
+        <article class="fix" data-for="safari"><span class="here">You</span><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></svg><h3>Safari</h3>
+          <ul><li><b>Neither wallet works in Safari.</b> Phantom lists Safari as unsupported, and MetaMask offers no Safari version.</li><li>On a Mac, play in <b>Chrome</b> (free from <a href="https://www.google.com/chrome/" target="_blank" rel="noopener">google.com/chrome</a>). Edge and Brave work too.</li></ul></article>
+        <article class="fix" data-for="firefox"><span class="here">You</span><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3c-2 3-2 6 0 9s2 6 0 9"/><path d="M3.5 9h17M3.5 15h17"/></svg><h3>Firefox</h3>
+          <ul><li><b>Phantom no longer supports Firefox</b> and has stopped updating it there.</li><li>Use <b>MetaMask</b> on Firefox, or Phantom in Chrome.</li></ul></article>
+        <article class="fix" data-for="phone"><span class="here">You</span><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="3" width="10" height="18" rx="2"/><path d="M11 18h2"/></svg><h3>On a phone</h3>
+          <ul><li><b>ONE LIFE plays on a computer.</b></li><li>Set up the wallet there, in the browser you will play in.</li></ul></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="final">
+    <div class="wrap">
+      <span class="eyebrow">Stuck?</span>
+      <h2>Ask in the Discord.</h2>
+      <p>Someone will walk you through it. We will never ask for your phrase.</p>
+      <div class="cta-row">
+        <a class="btn btn-ember" href="https://discord.gg/5dEJHQXYER" target="_blank" rel="noopener">Join the Discord</a>
+        <a class="btn btn-ghost" href="./">Back to ONE LIFE</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><a href="./">Home</a><a href="https://discord.gg/5dEJHQXYER" target="_blank" rel="noopener">Discord</a><a href="https://x.com/One_Life_Game" target="_blank" rel="noopener">X</a></div>
+    <div>© 2026 ONE LIFE</div>
+  </div>
+  <div class="wrap"><p class="fine">Phantom, MetaMask, Solflare, Backpack, Chrome, Edge, Brave, Opera, Firefox and Safari belong to their makers. ONE LIFE is not affiliated with them. Button names may change when the wallets update.</p></div>
+</footer>
+
+<script>
+// Sends each visitor to the wallet's page in the extension store of the browser they are on; without this script every button
+// goes to the wallet's own download page.
+(function(){
+  // THE STORE TABLE. Copied ONLY from each wallet's own official pages (never from memory, search results or other sites),
+  // checked 2026-10-13:
+  //   Phantom  https://phantom.com/download : its Chrome, Brave and Edge buttons all open the Chrome Web Store item below.
+  //            https://help.phantom.com/hc/en-us/articles/48456789393811 (Supported platforms and browsers): Chrome supported;
+  //            Brave, Opera and Edge work from that same Chrome item; Firefox ("no longer receives updates") and Safari unsupported.
+  //   MetaMask https://metamask.io/download : its Chrome, Brave, Opera and Edge buttons open the Chrome Web Store item below, its
+  //            Firefox button the Firefox Add-ons item below; it offers no Safari extension.
+  var STORES={
+    phantom:{name:'Phantom',download:'https://phantom.com/download',
+      chromeStore:'https://chrome.google.com/webstore/detail/phantom/bfnaelmomeimhlpmgjnjophhpkkoljpa',firefoxStore:null},
+    metamask:{name:'MetaMask',download:'https://metamask.io/download',
+      chromeStore:'https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn',
+      firefoxStore:'https://addons.mozilla.org/en-US/firefox/addon/ether-metamask/'}
+  };
+  var NAMES={chrome:'Chrome',edge:'Edge',brave:'Brave',opera:'Opera',firefox:'Firefox',safari:'Safari'};
+  var STORE_OF={chrome:'chromeStore',edge:'chromeStore',brave:'chromeStore',opera:'chromeStore',firefox:'firefoxStore'};
+  // What the store asks for, from Chrome's and MetaMask's help (Add to Chrome / Brave / Firefox), Microsoft's (Edge: Allow, then
+  // Add extension) and Opera's (its Install Chrome Extensions helper, then Add to Opera).
+  var ADD={chrome:'click “Add to Chrome”, then “Add extension”',brave:'click “Add to Brave”, then “Add extension”',
+    edge:'click the add button, “Allow” if Edge asks about other stores, then “Add extension”',
+    opera:'add Opera’s “Install Chrome Extensions” helper if asked, then click “Add to Opera”',
+    firefox:'click “Add to Firefox”, then “Add”'};
+
+  var ua=navigator.userAgent||'';
+  var brands=((navigator.userAgentData&&navigator.userAgentData.brands)||[]).map(function(b){return b.brand;}).join(' ');
+  var phone=/Android|iPhone|iPod|iPad|Mobi/i.test(ua)||(/Macintosh/.test(ua)&&navigator.maxTouchPoints>1);
+  var b='';
+  if(navigator.brave||/Brave/.test(brands))b='brave';
+  else if(/Edg\//.test(ua)||/Microsoft Edge/.test(brands))b='edge';
+  else if(/OPR\/|Opera/.test(ua)||/Opera/.test(brands))b='opera';
+  else if(/Firefox\//.test(ua))b='firefox';
+  else if(/Chrome\/|Chromium\//.test(ua))b='chrome';
+  else if(/Safari\//.test(ua)&&/Apple/.test(navigator.vendor||''))b='safari';
+  if(phone)b='';
+
+  // The line under the title: what this browser means for the visitor.
+  var you=document.getElementById('you'),youText=document.getElementById('you-text'),say='',warn=false;
+  if(phone){say='<b>You’re on a phone or tablet.</b> ONE LIFE plays on a computer: set up your wallet there.';warn=true;}
+  else if(b==='safari'){say='<b>You’re on Safari.</b> Phantom and MetaMask have no Safari version. Use Chrome, Edge or Brave for ONE LIFE.';warn=true;}
+  else if(b==='firefox'){say='<b>You’re on Firefox.</b> Phantom no longer supports it: use MetaMask here, or Phantom in Chrome.';warn=true;}
+  else if(b){say='<b>You’re on '+NAMES[b]+'.</b> The buttons below open the right store for it.';}
+  if(say){youText.innerHTML=say;you.hidden=false;if(warn)you.classList.add('warn');}
+
+  function link(href,text){var a=document.createElement('a');a.href=href;a.textContent=text;a.target='_blank';a.rel='noopener';return a;}
+  function setup(id){
+    var w=STORES[id],box=document.querySelector('[data-wallet="'+id+'"]');if(!box)return;
+    var btn=box.querySelector('.get-btn'),label=box.querySelector('.get-label'),note=box.querySelector('.get-note'),others=box.querySelector('.others');
+    var url=b&&STORE_OF[b]?w[STORE_OF[b]]:null;
+    if(url){btn.href=url;label.textContent='Add '+w.name+' to '+NAMES[b];}
+    // Firefox: MetaMask is the one that works there, so its button leads.
+    var lead=b==='firefox'?id==='metamask':id==='phantom';
+    btn.classList.toggle('btn-ember',lead);btn.classList.toggle('btn-ghost',!lead);
+    var n='';
+    if(!phone&&b&&!url)n=b==='safari'?w.name+' has no Safari version. Open this page in Chrome, Edge or Brave.':w.name+' no longer supports Firefox. Use MetaMask below, or Phantom in Chrome.';
+    else if(url&&b==='edge')n='Opens the Chrome Web Store. Click “Allow” if Edge asks about extensions from other stores.';
+    else if(url&&b==='opera')n='Opens the Chrome Web Store. Opera first asks you to add its “Install Chrome Extensions” helper.';
+    if(url&&id==='phantom'&&(b==='edge'||b==='brave'||b==='opera'))n=(n?n+' ':'')+'Phantom works here, though it officially supports only Chrome.';
+    if(n){note.textContent=n;note.hidden=false;}
+    var adds=box.closest('.wallet').querySelectorAll('[data-add]');
+    for(var i=0;i<adds.length;i++)if(url&&ADD[b])adds[i].textContent=ADD[b];
+    // The other browsers, under the button.
+    others.append('Chrome, Edge, Brave, Opera: ',link(w.chromeStore,'Chrome Web Store'));
+    if(w.firefoxStore)others.append(' · Firefox: ',link(w.firefoxStore,'Firefox Add-ons'));else others.append(' · Firefox: not supported');
+    others.append(' · Safari: none · All: ',link(w.download,w.download.replace('https://','')));
+  }
+  setup('phantom');setup('metamask');
+  // Mark the troubleshooting card for this visitor's browser.
+  var hit=phone?'phone':b;
+  if(hit){var cards=document.querySelectorAll('.fix[data-for="'+hit+'"]');for(var j=0;j<cards.length;j++)cards[j].classList.add('hit');}
+})();
+</script>
+</body>
+</html>
